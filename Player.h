@@ -23,6 +23,6 @@ class Player {
   int GetVegetable();
   int Get(Resource resource);
 
-  void Add(Resource resource, int count = 1);
+  void Add(Resource resource, int count);
   void Draw();
 };

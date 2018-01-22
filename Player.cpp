@@ -45,7 +45,7 @@ int Player::Get(Resource resource) {
   }
 }
 
-void Player::Add(Resource resource, int count = 1) {
+void Player::Add(Resource resource, int count) {
   switch (resource) {
     case Resource::Food: food += count; break;
     case Resource::Wood: wood += count; break;
@@ -65,13 +65,4 @@ void Player::Draw() {
   std::cout << "Stone = " << stone << std::endl;
   std::cout << "Grain = " << grain << std::endl;
   std::cout << "Vegetable = " << vegetable << std::endl;
-}
-
-int main() {
-  Player p;
-  p.Draw();
-  p.Add(Player::Resource::Food, 2);
-  p.Add(Player::Resource::Wood);
-  p.Draw();
-  return 0;
 }
