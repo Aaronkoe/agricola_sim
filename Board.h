@@ -1,4 +1,5 @@
 #pragma once
+#include "Player.h"
 
 class Board {
  public:
@@ -10,6 +11,7 @@ class Board {
  public:
   Board();
   int GetRound();
+  void HandleHarvestEating(Player& player);
   bool IsGameOver();
   void Draw();
   void AdvanceState();

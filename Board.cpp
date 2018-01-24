@@ -10,6 +10,36 @@ int Board::GetRound() {
   return round;
 }
 
+void Board::HandleHarvestEating(Player& player) {
+  int foodNeeded = player.GetPeople() * 2;
+
+  if (player.GetFood() >= foodNeeded) {
+    player.Sub(Player::Resource::Food, foodNeeded);
+    return;
+  }
+
+  foodNeeded -= player.GetFood();
+  player.Sub(Player::Resource::Food, player.GetFood());
+
+  if (player.GetGrain() >= foodNeeded) {
+    player.Sub(Player::Resource::Grain, foodNeeded);
+    return;
+  }
+
+  foodNeeded -= player.GetGrain();
+  player.Sub(Player::Resource::Grain, player.GetGrain());
+
+  if (player.GetVegetable() >= foodNeeded) {
+    player.Sub(Player::Resource::Vegetable, foodNeeded);
+    return;
+  }
+  
+  foodNeeded -= player.GetVegetable();
+  player.Sub(Player::Resource::Vegetable, player.GetVegetable());
+  
+  player.AddBeg(foodNeeded);
+}
+
 bool Board::IsGameOver() {
   return (state == BoardState::GameEnd);
 }
