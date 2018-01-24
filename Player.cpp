@@ -82,4 +82,5 @@ void Player::Draw() {
   std::cout << "Stone = " << stone << std::endl;
   std::cout << "Grain = " << grain << std::endl;
   std::cout << "Vegetable = " << vegetable << std::endl;
+  std::cout << "Begged = " << beg << std::endl;
 }
