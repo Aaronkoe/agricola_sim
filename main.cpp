@@ -5,5 +5,7 @@
 int main() {
   AgricolaGame agame;
   agame.Draw();
+  agame.StepTurn();
+  agame.Draw();
   return 0;
 }

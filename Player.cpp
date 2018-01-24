@@ -43,6 +43,7 @@ int Player::Get(Resource resource) {
     case Resource::Grain: return grain; break;
     case Resource::Vegetable: return vegetable; break;
   }
+  return -1;
 }
 
 void Player::Add(Resource resource, int count) {

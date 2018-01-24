@@ -8,5 +8,6 @@ class AgricolaGame {
   Board board;
   Player player;
  public:
+  void StepTurn();
   void Draw();
 };
