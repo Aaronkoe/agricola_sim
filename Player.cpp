@@ -46,6 +46,14 @@ int Player::Get(Resource resource) {
   return -1;
 }
 
+int Player::GetBeg() {
+  return beg;
+}
+
+void Player::AddBeg(int count) {
+  beg += count;
+}
+
 int Player::GetPeople() {
   return people;
 }
@@ -60,6 +68,10 @@ void Player::Add(Resource resource, int count) {
     case Resource::Grain: grain += count; break;
     case Resource::Vegetable: vegetable += count; break;
   }
+}
+
+void Player::Sub(Resource resource, int count) {
+  Add(resource, -count);
 }
 
 void Player::Draw() {

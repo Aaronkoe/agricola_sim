@@ -14,6 +14,7 @@ class Player {
   int vegetable = 0;
 
   //Other
+  int beg = 0;
   int people = 2;
 
  public:
@@ -28,6 +29,12 @@ class Player {
   int GetVegetable();
   int Get(Resource resource);
 
+  int GetBeg();
+  void AddBeg(int count);
+  int GetPeople();
+  
+
   void Add(Resource resource, int count);
+  void Sub(Resource resource, int count);
   void Draw();
 };
