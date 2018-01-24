@@ -4,8 +4,6 @@
 #include <iostream>
 int main() {
   AgricolaGame agame;
-  agame.Draw();
-  agame.StepTurn();
-  agame.Draw();
+  agame.Play();
   return 0;
 }
