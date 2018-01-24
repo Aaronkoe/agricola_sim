@@ -12,6 +12,7 @@ class Board {
   Board();
   int GetRound();
   void HandleHarvestEating(Player& player);
+  bool IsHarvest();
   bool IsGameOver();
   void Draw();
   void AdvanceState();

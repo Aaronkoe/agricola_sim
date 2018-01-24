@@ -40,6 +40,10 @@ void Board::HandleHarvestEating(Player& player) {
   player.AddBeg(foodNeeded);
 }
 
+bool Board::IsHarvest() {
+  return (state == BoardState::Harvest);
+}
+
 bool Board::IsGameOver() {
   return (state == BoardState::GameEnd);
 }
