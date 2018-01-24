@@ -46,6 +46,10 @@ int Player::Get(Resource resource) {
   return -1;
 }
 
+int Player::GetPeople() {
+  return people;
+}
+
 void Player::Add(Resource resource, int count) {
   switch (resource) {
     case Resource::Food: food += count; break;

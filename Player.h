@@ -4,6 +4,7 @@ class Player {
  public:
   enum class Resource {Food, Wood, Clay, Reed, Stone, Grain, Vegetable};
  private:
+  //Resources
   int food = 0;
   int wood = 0;
   int clay = 0;
@@ -11,6 +12,10 @@ class Player {
   int stone = 0;
   int grain = 0;
   int vegetable = 0;
+
+  //Other
+  int people = 2;
+
  public:
   Player() = default;
   Player(int food_in);
