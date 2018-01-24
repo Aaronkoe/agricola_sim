@@ -1,10 +1,9 @@
 #include "AgricolaGame.h"
 
 void AgricolaGame::Play() {
-  StepTurn();
-  while (!(board.IsGameOver())) {
-    Draw();
+  while (!board.IsGameOver()) {
     StepTurn();
+    Draw();
   }
 }
 
@@ -15,4 +14,7 @@ void AgricolaGame::Draw() {
 
 void AgricolaGame::StepTurn() {
   board.AdvanceState();
+  if (board.IsHarvest()) {
+    board.HandleHarvestEating(player);
+  }
 }
